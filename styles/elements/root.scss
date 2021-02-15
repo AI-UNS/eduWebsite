@@ -1,0 +1,101 @@
+$softRed: #ff5f60;
+$white: #ffffff;
+$darkBlue: #1f3148;
+
+// boxes color ///////////
+$yellow: #ffc300;
+$pink: #e96a96;
+$aqua: #4bc0a2;
+$purple: #a373b6;
+$lightAqua: #52c7fc;
+$blue: #0070be;
+////////////////////
+
+// Icon Bg
+$lighterAqua: #4bd2ff;
+$mixBluePurple: #694bff;
+$golden:#ffb14b;
+////////////
+
+// Content color
+$gray: #8c8c8c;
+$blackish: #222222;
+$orangish: #fb8122;
+
+
+
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$mini: 320px;
+
+@mixin media($size: $xl) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+
+.container {
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+
+}
+
+.d-block{
+    display: block;
+}
+
+.justify-content-start {
+    justify-content: start;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around{
+    justify-content: space-around;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-wrap-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-colomn {
+    flex-direction: column;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.text-center {
+    text-align: center;
+}
