@@ -22,13 +22,11 @@ function myLoop() {
             i = 0;
             incr++;
             for(let i = 0; i < 6; i++){
-                boxContainer[i].style = `opacity: 0; transition: 1s;`;
+                boxContainer[i].style = `opacity: 0; transition: 0.5s;`;
             }
         }
         myLoop();
     }, 4000)
 }
-
-
 
 myLoop()
