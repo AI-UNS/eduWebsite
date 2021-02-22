@@ -90,3 +90,16 @@ for (let i = 0; i < slides.length; i++) {
         quoteAuth.innerHTML = quotesList[i]['author'];
     })
 }
+
+let wave = document.querySelectorAll('.wave');
+function waves() {
+    for(let i = 0; i < wave.length ; i++){
+
+        wave[i].style = `
+            clip-path: polygon(0 0, 10% ${Math.floor(Math.random() * 50)}%, 20% ${Math.floor(Math.random() * 50)}%, 30% ${Math.floor(Math.random() * 50)}%, 40% ${Math.floor(Math.random() * 50)}%, 50% ${Math.floor(Math.random() * 50)}%, 60% ${Math.floor(Math.random() * 50)}%, 70% ${Math.floor(Math.random() * 50)}%, 80% ${Math.floor(Math.random() * 50)}%, 90% ${Math.floor(Math.random() * 50)}%, 100% 0, 100% 100%, 0 100%);
+            transition: 1s;
+        `;
+    }
+}
+
+setInterval(waves, 1500);
