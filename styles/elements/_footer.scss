@@ -1,0 +1,29 @@
+.footer {
+    margin-top: 120px;
+
+
+    .gray-line {
+        height: 1px;
+        background: $inviz;
+        width: 100%;
+    }
+
+    &__content {
+        margin: 50px 0;
+        font-size: 14px;
+        
+        &-text {
+            color: $inviz;
+            line-height: 30px;
+        }
+        
+        &-links {
+            a{
+                color: $inviz;
+            }
+            li{
+                margin-left: 50px;
+            }
+        }
+    }
+}

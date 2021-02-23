@@ -1,3 +1,4 @@
+////////////////////////////////////// header slider ////////////////////////////////////////
 let boxContainer = document.querySelectorAll('.box');
 let i = 0;
 let incr = 2;
@@ -31,7 +32,7 @@ function myLoop() {
 
 myLoop()
 
-///////////////////////////// Slides ////////////////////////////////
+///////////////////////////// Quote Slides ////////////////////////////////
 
 const quotesList = {
     0: {
@@ -103,3 +104,15 @@ function waves() {
 }
 
 setInterval(waves, 1500);
+
+///////////////////////////////////////////////////////////////////////////////////////
+let factsIcon = document.querySelectorAll('.fact i');
+const ICON_COLORS = {
+    0: '#4bd2ff',
+    1: '#694bff',
+    2: '#ffb14b',
+}
+
+for(let i = 0; i < factsIcon.length; i++){
+    factsIcon[i].style = `background: ${ICON_COLORS[i]} ;`;
+}
