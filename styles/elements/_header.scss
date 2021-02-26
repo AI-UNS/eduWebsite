@@ -12,7 +12,7 @@ a {
     text-decoration: none;
 }
 
-body{
+body {
     font-family: 'OpenSans', sans-serif;
 }
 
@@ -23,6 +23,17 @@ body{
     border-radius: 30px;
     background: $softRed;
     padding: 15px 30px;
+
+    @include media($xl) {
+        padding: 14px 28px;
+        font-size: 17px;
+    }
+
+    @include media($lg) {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
 }
 
 .header {
@@ -35,12 +46,23 @@ body{
         .nav {
             height: 15%;
 
+            img {
+                width: 90%;
+                height: 90%;
+                object-fit: contain;
+                transform: translateY(-20%);
+            }
+
             &__list-link {
                 margin-left: 50px;
 
                 a {
                     color: $white;
                     font-size: 18px;
+
+                    @include media($xl) {
+                        font-size: 17px;
+                    }
                 }
             }
 
@@ -50,11 +72,14 @@ body{
             height: 85%;
             width: 100%;
 
-
             &-text {
                 width: 50%;
                 height: 100%;
                 position: relative;
+
+                @include media($xl) {
+                    padding: 10px;
+                }
 
 
                 &-reg {
@@ -66,10 +91,33 @@ body{
                     border-radius: 20px;
                     background: $softRed;
 
+
+                    @include media($xl) {
+                        transform: translateY(70%);
+                        border-top: 8px solid $darkBlue;
+                    }
+                    
+                    @include media($lg) {
+                        transform: translateY(75%);
+                        border-top: 7px solid $darkBlue;
+                        
+                    }
+
+
                     h2 {
                         color: $white;
+                        text-align: center;
                         font-size: 30px;
                         margin: 30px 0 15px 0;
+
+                        @include media($xl) {
+                            font-size: 28px;
+                        }
+
+                        @include media($lg) {
+                            font-size: 25px;
+                            margin: 20px 0 10px;
+                        }
                     }
 
                     .white-line {
@@ -84,6 +132,11 @@ body{
                         font-weight: 300;
                         letter-spacing: 3px;
                         margin: 35px 0 15px 0;
+
+                        @include media($lg) {
+                            margin: 25px 0 11px;
+                        }
+
                     }
 
                     .email-submit {
@@ -91,6 +144,10 @@ body{
                         display: flex;
                         flex-direction: row;
                         margin-bottom: 50px;
+                        
+                        @include media($lg) {
+                            margin-bottom: 35px;
+                        }
 
                         input[type=email] {
                             height: 40px;
@@ -98,6 +155,8 @@ body{
                             border: 0;
                             padding-left: 20px;
                             border-radius: 50px 0 0 50px;
+
+
                         }
 
                         button[type=submit] {
@@ -115,8 +174,18 @@ body{
                 }
 
                 h1 {
-                    font-size: 70px;
+                    font-size: 60px;
                     color: $white;
+
+
+                    @include media($xl) {
+                        font-size: 55px;
+                    }
+
+                    @include media($lg) {
+                        font-size: 40px;
+                    }
+
                 }
 
                 p {
@@ -124,6 +193,19 @@ body{
                     line-height: 30px;
                     color: $white;
                     margin: 40px 0 50px 0;
+
+                    @include media($xl) {
+                        font-size: 16px;
+                        margin: 25px 0 38px;
+                        line-height: 25px;
+                    }
+
+                    @include media($lg) {
+                        font-size: 15px;
+                        margin: 20px 0 25px 0;
+                        line-height: 20px;
+                    }
+
                 }
 
             }
