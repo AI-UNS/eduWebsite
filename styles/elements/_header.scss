@@ -30,8 +30,13 @@ body {
     }
 
     @include media($lg) {
-        padding: 12px 24px;
+        padding: 10px 20px;
         font-size: 16px;
+    }
+
+    @include media($md) {
+        // padding: ;
+        font-size: 14px;
     }
 
 }
@@ -56,6 +61,15 @@ body {
             &__list-link {
                 margin-left: 50px;
 
+                @include media($lg) {
+                    margin-left: 35px;
+                }
+
+                @include media($md) {
+                    margin-left: 25px;
+                }
+
+
                 a {
                     color: $white;
                     font-size: 18px;
@@ -63,6 +77,15 @@ body {
                     @include media($xl) {
                         font-size: 17px;
                     }
+
+                    @include media($lg) {
+                        font-size: 16px;
+                    }
+
+                    @include media($md) {
+                        font-size: 15px;
+                    }
+
                 }
             }
 
@@ -92,16 +115,6 @@ body {
                     background: $softRed;
 
 
-                    @include media($xl) {
-                        transform: translateY(70%);
-                        border-top: 8px solid $darkBlue;
-                    }
-                    
-                    @include media($lg) {
-                        transform: translateY(75%);
-                        border-top: 7px solid $darkBlue;
-                        
-                    }
 
 
                     h2 {
@@ -118,6 +131,12 @@ body {
                             font-size: 25px;
                             margin: 20px 0 10px;
                         }
+
+                        @include media($md) {
+                            font-size: 20px;
+                            margin: 15px 0 8px 0;
+                        }
+
                     }
 
                     .white-line {
@@ -132,9 +151,16 @@ body {
                         font-weight: 300;
                         letter-spacing: 3px;
                         margin: 35px 0 15px 0;
+                        text-align: center;
 
                         @include media($lg) {
+                            font-size: 18px;
                             margin: 25px 0 11px;
+                        }
+
+                        @include media($md) {
+                            font-size: 14px;
+                            margin: 15px 0 8px 0;
                         }
 
                     }
@@ -144,7 +170,7 @@ body {
                         display: flex;
                         flex-direction: row;
                         margin-bottom: 50px;
-                        
+
                         @include media($lg) {
                             margin-bottom: 35px;
                         }
@@ -157,17 +183,58 @@ body {
                             border-radius: 50px 0 0 50px;
 
 
+                            @include media($lg) {
+                                height: 30px;
+                                padding-left: 15px;
+                            }
+
+                            @include media($md) {
+                                height: 25px;
+                                padding-left: 10px;
+                            }
+                        }
+
+                        input[type=email]:focus {
+                            outline: none;
+                        }
+
+                        input[type=email]::placeholder {
+                            font-size: 17px;
+
+                            @include media($lg) {
+                                font-size: 14px;
+                            }
+
+                            @include media($md) {
+                                font-size: 11.5px;
+                            }
                         }
 
                         button[type=submit] {
                             height: 40px;
                             width: 20%;
                             border: 0;
+                            font-size: 17px;
                             background: $darkBlue;
                             border-radius: 0 50px 50px 0;
 
+                            @include media($lg) {
+                                height: 30px;
+                            }
+
+                            @include media($md) {
+                                height: 25px;
+                            }
+
                             i {
                                 color: $white;
+
+                                @include media($lg) {
+                                    font-size: 15px;
+                                }
+                                @include media($md) {
+                                    font-size: 14px;
+                                }
                             }
                         }
                     }
@@ -186,6 +253,9 @@ body {
                         font-size: 40px;
                     }
 
+                    @include media($md) {
+                        font-size: 32px;
+                    }
                 }
 
                 p {
@@ -204,6 +274,12 @@ body {
                         font-size: 15px;
                         margin: 20px 0 25px 0;
                         line-height: 20px;
+                    }
+
+                    @include media($md) {
+                        font-size: 14px;
+                        margin: 15px 0 20px 0;
+                        line-height: 18px;
                     }
 
                 }
@@ -225,6 +301,7 @@ body {
 
                 .box {
                     position: absolute;
+                    text-align: center;
                     border-radius: 30px;
                     margin-top: 20px;
                     color: white;
@@ -239,16 +316,61 @@ body {
                     h2 {
                         text-transform: uppercase;
                         margin: 20px 0;
+                        font-size: 24px;
+
+                        @include media($xl) {
+                            font-size: 20px;
+                            line-height: 25px;
+                        }
+
+                        @include media($lg) {
+                            font-size: 19px;
+                            line-height: 20px;
+                        }
+
+                        @include media($md) {
+                            font-size: 16px;
+                            line-height: 18px;
+                        }
                     }
 
                     p {
                         text-transform: uppercase;
                         padding: 0 20px;
                         text-align: center;
+
+
+                        @include media($xl) {
+                            font-size: 18px;
+                            line-height: 25px;
+                        }
+
+                        @include media($lg) {
+                            font-size: 16px;
+                            line-height: 20px;
+                        }
+
+                        @include media($md) {
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
                     }
 
                     i {
                         font-size: 40px;
+
+
+                        @include media($xl) {
+                            font-size: 38px;
+                        }
+
+                        @include media($lg) {
+                            font-size: 35pxpx;
+                        }
+
+                        @include media($md) {
+                            font-size: 32px;
+                        }
                     }
                 }
             }
