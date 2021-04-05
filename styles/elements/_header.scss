@@ -39,6 +39,11 @@ body {
         font-size: 14px;
     }
 
+    @include media($sm) {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
 }
 
 .header {
@@ -59,14 +64,18 @@ body {
             }
 
             &__list-link {
-                margin-left: 50px;
+                margin-right: 50px;
 
                 @include media($lg) {
-                    margin-left: 35px;
+                    margin-right: 35px;
                 }
 
                 @include media($md) {
-                    margin-left: 25px;
+                    margin-right: 25px;
+                }
+
+                @include media($sm) {
+                    margin-right: 10px;
                 }
 
 
@@ -84,6 +93,11 @@ body {
 
                     @include media($md) {
                         font-size: 15px;
+                    }
+
+                    @include media($sm) {
+                        font-size: 10px;
+                        white-space: nowrap;
                     }
 
                 }
@@ -104,6 +118,10 @@ body {
                     padding: 10px;
                 }
 
+                @include media($sm) {
+                    padding: 5px;
+                }
+
 
                 &-reg {
                     position: absolute;
@@ -113,8 +131,6 @@ body {
                     width: 72%;
                     border-radius: 20px;
                     background: $softRed;
-
-
 
 
                     h2 {
@@ -135,6 +151,11 @@ body {
                         @include media($md) {
                             font-size: 20px;
                             margin: 15px 0 8px 0;
+                        }
+
+                        @include media($sm) {
+                            font-size: 17px;
+                            margin: 10px 0 6px 0;
                         }
 
                     }
@@ -163,6 +184,11 @@ body {
                             margin: 15px 0 8px 0;
                         }
 
+                        @include media($sm) {
+                            font-size: 12px;
+                            margin: 10px 0 4px 0;
+                        }
+
                     }
 
                     .email-submit {
@@ -173,6 +199,9 @@ body {
 
                         @include media($lg) {
                             margin-bottom: 35px;
+                        }
+                        @include media($sm) {
+                            margin-bottom: 20px;
                         }
 
                         input[type=email] {
@@ -192,6 +221,11 @@ body {
                                 height: 25px;
                                 padding-left: 10px;
                             }
+
+                            @include media($sm) {
+                                height: 20px;
+                                padding-left: 10px;
+                            }
                         }
 
                         input[type=email]:focus {
@@ -208,6 +242,9 @@ body {
                             @include media($md) {
                                 font-size: 11.5px;
                             }
+                            @include media($sm) {
+                                font-size: 9px;
+                            }
                         }
 
                         button[type=submit] {
@@ -217,6 +254,9 @@ body {
                             font-size: 17px;
                             background: $darkBlue;
                             border-radius: 0 50px 50px 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
 
                             @include media($lg) {
                                 height: 30px;
@@ -226,14 +266,22 @@ body {
                                 height: 25px;
                             }
 
+                            @include media($sm) {
+                                height: 20px;
+                            }
+
                             i {
                                 color: $white;
 
                                 @include media($lg) {
                                     font-size: 15px;
                                 }
+
                                 @include media($md) {
                                     font-size: 14px;
+                                }
+                                @include media($sm) {
+                                    font-size: 9px;
                                 }
                             }
                         }
@@ -255,6 +303,10 @@ body {
 
                     @include media($md) {
                         font-size: 32px;
+                    }
+
+                    @include media($sm) {
+                        font-size: 20px;
                     }
                 }
 
@@ -282,8 +334,12 @@ body {
                         line-height: 18px;
                     }
 
+                    @include media($sm) {
+                        font-size: 12px;
+                        margin: 5px 0 10px 0;
+                        line-height: 14px;
+                    }
                 }
-
             }
 
             &-box {
@@ -332,6 +388,10 @@ body {
                             font-size: 16px;
                             line-height: 18px;
                         }
+                        @include media($sm) {
+                            font-size: 14px;
+                            line-height: 16px;
+                        }
                     }
 
                     p {
@@ -353,6 +413,11 @@ body {
                         @include media($md) {
                             font-size: 14px;
                             line-height: 18px;
+                        }
+
+                        @include media($sm) {
+                            font-size: 12px;
+                            line-height: 14px;
                         }
                     }
 
